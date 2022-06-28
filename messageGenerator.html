@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Random Message Generator</title>
+    <style>
+        #container {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 50px;
+        }
+        h3 {
+            color: #000;;
+            width: 35%;
+        }
+        #messageDiv {
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            color: darkmagenta;
+            font-size: 5em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <script>
+        const btnClick = () => {
+          
+            const message = [ "Nothing is impossible",
+                              "Inspiration is important than experience.",
+                              "Life has got all those twists and turns....",
+                              "The bad news is time flies.... ",
+                              "There is nothing impossible to they who will try." ,
+                                "Inspiration is important than experience.",
+                                "Good advice is better than gold.",
+                                "Never stress over what you can’t control."];
+
+            let index = Math.floor(Math.random() * message.length);
+            document.getElementById("messageDiv").innerHTML = message[index];
+            document.getElementById("messageDiv").style.display = block;
+
+
+
+         
+            
+        }
+        
+
+    </script>
+</head>
+<body>
+    <header>
+        <h3>Please click the button to generate Random Inspirational Quote:</h3>
+    </header>
+    <div id="container">
+
+        <button  type="button" onclick="btnClick()" >Click Me</button>
+    </div>
+    <div id="messageDiv"></div>
+
+</body>
+    
+</html>
